@@ -1,0 +1,29 @@
+{
+  "name": "@emsquared/otto_data",
+  "version": "1.0.0",
+  "description": "",
+  "source": "index.ts",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RockyEMSqr/otto_data.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RockyEMSqr/otto_data/issues"
+  },
+  "homepage": "https://github.com/RockyEMSqr/otto_data#readme",
+  "dependencies": {
+    "mongoose": "^6.5.2"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97"
+  }
+}
