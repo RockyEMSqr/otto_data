@@ -11,15 +11,21 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./mongooseDataService"), exports);
-var mongoose_1 = require("mongoose");
-var schemaDef = {
-    bar: String,
-    booboo: String,
-    foo: String,
-    d: { type: Date },
-    user: { type: 'asdf', ref: 'adf' }
-};
-var s = new mongoose_1.Schema(schemaDef, {});
+// type X = {
+//     foo: string,
+//     bar: string,
+//     booboo: number,
+//     d: Date,
+//     user: any
+// }
+// let schemaDef: SchemaDef<X> = {
+//     bar: String,
+//     booboo: String,
+//     foo: String,
+//     d: { type: Date },
+//     user: { type: 'asdf', ref: 'adf' }
+// }
+// let s = new Schema(schemaDef, {})
 __exportStar(require("./dataService"), exports);
 __exportStar(require("./mongooseDataService"), exports);
 __exportStar(require("./paginatedMDS"), exports);

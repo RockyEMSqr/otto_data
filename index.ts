@@ -29,22 +29,22 @@ export type SchemaDef<T> = {
 }
 
 
-type X = {
-    foo: string,
-    bar: string,
-    booboo: number,
-    d: Date,
-    user: any
-}
-let schemaDef: SchemaDef<X> = {
-    bar: String,
-    booboo: String,
-    foo: String,
-    d: { type: Date },
-    user: { type: 'asdf', ref: 'adf' }
+// type X = {
+//     foo: string,
+//     bar: string,
+//     booboo: number,
+//     d: Date,
+//     user: any
+// }
+// let schemaDef: SchemaDef<X> = {
+//     bar: String,
+//     booboo: String,
+//     foo: String,
+//     d: { type: Date },
+//     user: { type: 'asdf', ref: 'adf' }
 
-}
-let s = new Schema(schemaDef, {})
+// }
+// let s = new Schema(schemaDef, {})
 
 export * from './dataService';
 export * from './mongooseDataService';
