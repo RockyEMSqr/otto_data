@@ -45,3 +45,7 @@ let schemaDef: SchemaDef<X> = {
 
 }
 let s = new Schema(schemaDef, {})
+
+export * from './dataService';
+export * from './mongooseDataService';
+export * from './paginatedMDS';

@@ -12,7 +12,9 @@
 		"removeComments": false,
 		"noImplicitAny": false,
 		"outDir": "dist/",
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"declaration": true,
+		"declarationMap": true
 	},
 	"exclude": [
 		"node_modules",

@@ -20,4 +20,7 @@ var schemaDef = {
     user: { type: 'asdf', ref: 'adf' }
 };
 var s = new mongoose_1.Schema(schemaDef, {});
+__exportStar(require("./dataService"), exports);
+__exportStar(require("./mongooseDataService"), exports);
+__exportStar(require("./paginatedMDS"), exports);
 //# sourceMappingURL=index.js.map
