@@ -1,19 +1,19 @@
 
 import { ADataService } from './dataService';
-import * as mongoose from 'mongoose';
-export abstract class MDataService<M extends mongoose.Document, DS> extends ADataService<M>{
+import * as mongoosee from 'mongoose';
+export abstract class MDataService<M extends mongoosee.Document, DS> extends ADataService<M>{
     constructor(protected user, protected ds: DS) {
         super(user, ds);
     }
-    abstract model: mongoose.Model<M>;
+    abstract model: mongoosee.Model<M>;
     public find = this.search;
     /**
      * find pass through
      */
-    public get f(): (conditions: any, projection?: any | null, ) =>  mongoose.Query<M[], M> {
+    public get f(): (conditions: any, projection?: any | null, ) =>  mongoosee.Query<M[], M> {
         return this.model.find.bind(this.model);
     }
-    public get f1(): (conditions: any, projection?: any | null, ) => mongoose.Query<M[], M> {
+    public get f1(): (conditions: any, projection?: any | null, ) => mongoosee.Query<M[], M> {
         return this.model.findOne.bind(this.model);
     }
 
@@ -81,13 +81,13 @@ export abstract class MDataService<M extends mongoose.Document, DS> extends ADat
     }
 
 }
-export class GenericMDataService<M extends mongoose.Document, DS> extends MDataService<M, DS>{
+export class GenericMDataService<M extends mongoosee.Document, DS> extends MDataService<M, DS>{
     constructor(public model, protected user, protected ds) {
         super(user, ds);
     }
 
 }
-export function connect(mongoConnectionString) {
+export function connect(mongoose, mongoConnectionString) {
     let attempt = 0;
     var connect = function () {
         attempt++;

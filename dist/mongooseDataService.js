@@ -51,7 +51,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.connect = exports.GenericMDataService = exports.MDataService = void 0;
 var dataService_1 = require("./dataService");
-var mongoose = require("mongoose");
 var MDataService = /** @class */ (function (_super) {
     __extends(MDataService, _super);
     function MDataService(user, ds) {
@@ -199,7 +198,7 @@ var GenericMDataService = /** @class */ (function (_super) {
     return GenericMDataService;
 }(MDataService));
 exports.GenericMDataService = GenericMDataService;
-function connect(mongoConnectionString) {
+function connect(mongoose, mongoConnectionString) {
     var attempt = 0;
     var connect = function () {
         attempt++;
